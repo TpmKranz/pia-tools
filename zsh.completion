@@ -1,0 +1,14 @@
+#compdef pia-tools
+
+_arguments \
+    {-p,--port}'[Request a new forwarding port]' \
+    {-a,--allow}'[Unblock all non-VPN traffic (default)]' \
+    {-d,--disallow}'[Block all non-VPN traffic]' \
+    {-g,--pia-dns}'[Backup /etc/resolv.conf and create a new using PIA'"'"'s DNS service]' \
+    '--google-dns[Backup /etc/resolv.conf and create a new one using Google'"'"'s DNS service]' \
+    '--restore-dns[Restore /etc/resolv.conf from backup]' \
+    {-s,--setup}'[Run the interactive setup which will create the passwd and download the config files from PIA]' \
+    {-u,--update}'[Reset/Update the configuration files in PIA_CONFIG_DIR]' \
+    {-c,--check}'[Check if OpenVPN is running, if not stop transmissiond]' \
+    {-i,--info}'[Show information about the status of openvpn, transmission]' \
+    {-v,--verbose}'[Enable verbose output. In order to get really verbose you can also try bash -x pia-tools]'

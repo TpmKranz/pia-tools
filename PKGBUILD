@@ -24,6 +24,8 @@ package() {
     install -Dm755 pia-down "${pkgdir}/etc/openvpn/pia/pia-down"
     install -Dm755 pia-up "${pkgdir}/etc/openvpn/pia/pia-up.custom.sample"
     install -Dm755 pia-down "${pkgdir}/etc/openvpn/pia/pia-down.custom.sample"
+    install -Dm644 ./zsh.completion\
+        "$pkgdir/usr/share/zsh/site-functions/_pia-tools"
     # Activate the ovpn update service
     install -d -m755 "${pkgdir}/usr/lib/systemd/system/multi-user.target.wants"
     ln -s ../pia-tools-update.timer "${pkgdir}/usr/lib/systemd/system/multi-user.target.wants/pia-tools-update.timer"

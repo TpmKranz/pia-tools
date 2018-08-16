@@ -29,14 +29,14 @@ OpenVPN hook for privateinternetaccess.com to automate port forwarding, dynamica
 
 ```bash
 mkdir /tmp/pia-tools; cd !$
-curl -O https://raw.githubusercontent.com/pschmitt/pia-tools/master/{PKGBUILD,pia-tools.install}
+curl -O https://raw.githubusercontent.com/TpmKranz/pia-tools/master/{PKGBUILD,pia-tools.install}
 makepkg -si
 ```
 
 ### Other distros
 
 ```bash
-curl https://raw.githubusercontent.com/pschmitt/pia-tools/master/pia-tools > /usr/bin/pia-tools
+curl https://raw.githubusercontent.com/TpmKranz/pia-tools/master/pia-tools > /usr/bin/pia-tools
 ```
 
 #### MANPAGE
@@ -44,7 +44,7 @@ curl https://raw.githubusercontent.com/pschmitt/pia-tools/master/pia-tools > /us
 If you also want to have the MANPAGE:
 
 ```bash
-curl https://raw.githubusercontent.com/pschmitt/pia-tools/master/pia-tools.groff | gzip -c - > $MAN_PATH/pia-tools.1.gz
+curl https://raw.githubusercontent.com/TpmKranz/pia-tools/master/pia-tools.groff | gzip -c - > $MAN_PATH/pia-tools.1.gz
 ```
 
 **Note**: `$MANPATH` may not be defined, so you'll have to find out where to put the obtained file. On ArchLinux, this would be `/usr/share/man/man1/`
@@ -52,7 +52,7 @@ curl https://raw.githubusercontent.com/pschmitt/pia-tools/master/pia-tools.groff
 #### Systemd service file
 
 ```bash
-curl https://raw.githubusercontent.com/pschmitt/pia-tools/master/pia@.service > /usr/lib/systemd/system/pia@.service
+curl https://raw.githubusercontent.com/TpmKranz/pia-tools/master/pia@.service > /usr/lib/systemd/system/pia@.service
 ```
 
 ## Post installation
